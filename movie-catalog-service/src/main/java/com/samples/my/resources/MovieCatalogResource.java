@@ -1,12 +1,9 @@
 package com.samples.my.resources;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,8 +23,8 @@ public class MovieCatalogResource {
 //	@Autowired
 //	private DiscoveryClient discoveryClient;
 
-	@Autowired
-	private LoadBalancerClient loadBalancerClient;
+//	@Autowired
+//	private LoadBalancerClient loadBalancerClient;
 
 	@Autowired
 	private RestTemplate restTemplate;
@@ -57,19 +54,19 @@ public class MovieCatalogResource {
 //		URI ratigsUri = ratingsSvcInstances.get(0).getUri();
 
 		// Uses loadBalancerClient -- version 3
-		ServiceInstance ratingsSvcInstances = loadBalancerClient.choose("RATINGS-DATA-SVC");
-		URI ratigsUri = ratingsSvcInstances.getUri();
-
-		String ratingsDataSvcUrl = ratigsUri + "/ratingsdata/users/" + userId;
-		System.out.println("ratingsDataSvcUrl -->" + ratingsDataSvcUrl);
-		UserRating ratings = restTemplate.getForObject(ratingsDataSvcUrl, UserRating.class);
-		return ratings;
-		
-//		// Uses loadBalancedClient -- version 4
-//		ResponseEntity<UserRating> restExchange = restTemplate.exchange("http://RATINGS-DATA-SVC/ratingsdata/users{userId}", HttpMethod.GET, null, UserRating.class, userId);
-//		UserRating ratings = restExchange.getBody();
+//		ServiceInstance ratingsSvcInstances = loadBalancerClient.choose("RATINGS-DATA-SVC");
+//		URI ratigsUri = ratingsSvcInstances.getUri();
+//		String ratingsDataSvcUrl = ratigsUri + "/ratingsdata/users/" + userId;
+//		System.out.println("ratingsDataSvcUrl -->" + ratingsDataSvcUrl);
+//		UserRating ratings = restTemplate.getForObject(ratingsDataSvcUrl, UserRating.class);
 //		return ratings;
-		
+
+		// Uses @LoadBalanced restTemplate -- version 4
+		ResponseEntity<UserRating> restExchange = restTemplate.exchange(
+				"http://RATINGS-DATA-SVC/ratingsdata/users/{userId}", HttpMethod.GET, null, UserRating.class, userId);
+		UserRating ratings = restExchange.getBody();
+		return ratings;
+
 	}
 
 	private Movie getMovieInfo(String movieId) {
@@ -83,13 +80,17 @@ public class MovieCatalogResource {
 //		}
 //		URI movieUri = movieSvcInstances.get(0).getUri();
 
-		// Uses loadBalancedClient -- version 3
-		ServiceInstance movieSvcInstances = loadBalancerClient.choose("MOVIE-INFO-SVC");
-		URI moviesUri = movieSvcInstances.getUri();
+//		// Uses loadBalancedClient -- version 3
+//		ServiceInstance movieSvcInstances = loadBalancerClient.choose("MOVIE-INFO-SVC");
+//		URI moviesUri = movieSvcInstances.getUri();
+//		String movieInfoSvcUrl = moviesUri + "/movies/" + movieId;
+//		System.out.println("movieInfoSvcUrl -->" + movieInfoSvcUrl);
+//		Movie movie = restTemplate.getForObject(movieInfoSvcUrl, Movie.class);
 
-		String movieInfoSvcUrl = moviesUri + "/movies/" + movieId;
-		System.out.println("movieInfoSvcUrl -->" + movieInfoSvcUrl);
-		Movie movie = restTemplate.getForObject(movieInfoSvcUrl, Movie.class);
+		// Uses @LoadBalanced restTemplate -- version 4
+		ResponseEntity<Movie> restExchange = restTemplate.exchange("http://MOVIE-INFO-SVC/movies/{movieId}",
+				HttpMethod.GET, null, Movie.class, movieId);
+		Movie movie = restExchange.getBody();
 		return movie;
 	}
 }
