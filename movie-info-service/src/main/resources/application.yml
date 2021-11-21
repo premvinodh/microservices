@@ -1,0 +1,12 @@
+server:
+  port: 2001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5001/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+    hostname: localhost
+spring:
+  application:
+    name: movie-info-svc      
