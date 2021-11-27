@@ -15,7 +15,7 @@ Commits and their associated topics
 
 | Sl.No		| Topic                                       	| Commit Hash           								|
 |:---------:|:---------------------------------------------:|:-----------------------------------------------------:|
-| 	1.		|: Load Balancer Client      					| 675a66cca83cdab6bfa4d713c6445674854b9238				|
-|	2.		|: @LoadBalanced without retry      				| e85708cfbdf7b7bb594cce3ec0c123d320c80655				|
-|	3		|: @LoadBalanced with retry      				| 														|
+| 	1.		| Load Balancer Client      					| 675a66cca83cdab6bfa4d713c6445674854b9238				|
+|	2.		| @LoadBalanced without retry      				| e85708cfbdf7b7bb594cce3ec0c123d320c80655				|
+|	3		| @LoadBalanced with retry      				| 														|
 
