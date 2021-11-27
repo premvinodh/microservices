@@ -1,4 +1,7 @@
-<!-- https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#hiding-content-with-comments -->
+<!-- 
+	https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#hiding-content-with-comments 
+	https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables
+-->
 # microservices
 The concept/idea was borrowed from https://github.com/koushikkothagal/spring-boot-microservices-workshop
 
@@ -9,5 +12,10 @@ Contains the following projects
 
 Commits and their associated topics
 -----------------------------------
-1. load balancer client 			-- Commit Hash 675a66cca83cdab6bfa4d713c6445674854b9238
-2. @LoadBalanced without retry		-- Commit Hash e85708cfbdf7b7bb594cce3ec0c123d320c80655
+
+| Sl.No		| Topic                                       	| Commit Hash           								|
+|:---------:| --------------------------------------------- | -----------------------------------------------------:|
+| 	1.		| Load Balancer Client      					| 675a66cca83cdab6bfa4d713c6445674854b9238				|
+|	2.		| @LoadBalanced without retry      				| e85708cfbdf7b7bb594cce3ec0c123d320c80655				|
+|	3		| @LoadBalanced with retry      				| 														|
+
