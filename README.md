@@ -12,7 +12,7 @@ Contains the following projects
 
 Commits and their associated topics 
 -----------------------------------
-Refer the section below on how to [get a specific commit(#how-to-get-certain-commit-from-github-project)].
+Refer the section below on how to [get a specific commit(https://github.com/premvinodh/microservices#how-to-get-certain-commit-from-github-project)].
 
 | Sl.No		| Topic                                       	| Commit Hash           								|
 |:---------:|---------------------------------------------  |:-----------------------------------------------------:|
