@@ -14,11 +14,12 @@ Commits and their associated topics
 -----------------------------------
 Refer the section below on how to [get a specific commit(https://github.com/premvinodh/microservices#how-to-get-certain-commit-from-github-project)].
 
-| Sl.No		| Topic                                       	| Commit Hash           								|
-|:---------:|---------------------------------------------  |:-----------------------------------------------------:|
-| 	1.		| Load Balancer Client      					| 675a66cca83cdab6bfa4d713c6445674854b9238				|
-|	2.		| @LoadBalanced without retry      				| e85708cfbdf7b7bb594cce3ec0c123d320c80655				|
-|	3.		| @LoadBalanced with retry      				| 9c258733a619d16712b8ea6e90e2518233c76eb8				|
+| Sl.No		| Topic                                       				| Commit Hash           								|
+|:---------:|-----------------------------------------------------------|:-----------------------------------------------------:|
+| 	1.		| Load Balancer Client      								| 675a66cca83cdab6bfa4d713c6445674854b9238				|
+|	2.		| @LoadBalanced without retry      							| e85708cfbdf7b7bb594cce3ec0c123d320c80655				|
+|	3.		| @LoadBalanced with retry (without retry properties)     	| 9c258733a619d16712b8ea6e90e2518233c76eb8				|
+|	4.		| @LoadBalanced with retry (with retry properties)     		| 78128daa3eff377df0303bd5e75168b0d5d83620				|
 
 ### How to get certain commit from GitHub project
 ------------------------------------------------
