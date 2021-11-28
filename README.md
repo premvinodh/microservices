@@ -12,7 +12,7 @@ Contains the following projects
 
 Commits and their associated topics 
 -----------------------------------
-Refer the section below on how to [get a specific commit()].
+Refer the section below on how to [get a specific commit(#how-to-get-certain-commit-from-github-project)].
 
 | Sl.No		| Topic                                       	| Commit Hash           								|
 |:---------:|---------------------------------------------  |:-----------------------------------------------------:|
@@ -22,7 +22,7 @@ Refer the section below on how to [get a specific commit()].
 
 
 
-###How to get certain commit from GitHub project
+### How to get certain commit from GitHub project
 ------------------------------------------------
 1. First, clone the repository using git as shown below
 git clone https://github.com/premvinodh/microservices.git
