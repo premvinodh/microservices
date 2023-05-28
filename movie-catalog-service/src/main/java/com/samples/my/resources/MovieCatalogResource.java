@@ -1,6 +1,7 @@
 package com.samples.my.resources;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.samples.my.models.CatalogItem;
 import com.samples.my.models.Movie;
 import com.samples.my.models.Rating;
@@ -28,8 +30,13 @@ public class MovieCatalogResource {
 
 	@Autowired
 	private RestTemplate restTemplate;
+	
+	public List<CatalogItem> getFallbackCatalog(@PathVariable("userId") String userId) {
+		return Arrays.asList(new CatalogItem("No movie", "", "0"));
+	}
 
 	@RequestMapping("/{userId}")
+	@HystrixCommand(fallbackMethod = "getFallbackCatalog")
 	public List<CatalogItem> getCatalog(@PathVariable("userId") String userId) {
 		UserRating ratings = getUserRating(userId);
 
