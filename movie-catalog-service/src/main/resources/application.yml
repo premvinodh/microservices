@@ -10,3 +10,14 @@ eureka:
 spring:
   application:
     name: movie-catalog-svc
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+ratings-data-svc:
+  ribbon:
+    ReadTimeout: 3000
+    ConnectTimeout: 1000
+    OkToRetryOnAllOperations: true
+    MaxAutoRetriesNextServer: 6
+    MaxAutoRetries: 2
