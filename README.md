@@ -23,6 +23,7 @@ Refer the section below on how to [get a specific commit(https://github.com/prem
 |	4.		| @LoadBalanced with retry (with retry properties)     		| 78128daa3eff377df0303bd5e75168b0d5d83620				|
 |	5.		| Circuit Breaker with fallback funcationality			    | 7db33ca7246dba84b948dcc517051395f2c5bd85				|
 |	6.		| Granular fallback for invididual rest api calls		    | 40578f1f90f1d4bfaf6fae0073eb7105b3ef2b79				|
+|	7.		| Hystrix Dashabord for MovieCatalogService microservice    | 6ddcac40b9233896ed3c4d1c1e4a409c158cf716				|
 
 ### How to get certain commit from GitHub project
 ------------------------------------------------
