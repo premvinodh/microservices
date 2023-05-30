@@ -21,3 +21,10 @@ ratings-data-svc:
     OkToRetryOnAllOperations: true
     MaxAutoRetriesNextServer: 6
     MaxAutoRetries: 2
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - hystrix.stream
