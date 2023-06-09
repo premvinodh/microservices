@@ -24,14 +24,3 @@ Refer the section below on how to [get a specific commit(https://github.com/prem
 |	5.		| Circuit Breaker with fallback funcationality			    | 7db33ca7246dba84b948dcc517051395f2c5bd85				|
 |	6.		| Granular fallback for invididual rest api calls		    | 40578f1f90f1d4bfaf6fae0073eb7105b3ef2b79				|
 |	7.		| Hystrix Dashabord for MovieCatalogService microservice    | 6ddcac40b9233896ed3c4d1c1e4a409c158cf716				|
-
-### How to get certain commit from GitHub project
-------------------------------------------------
-1. First, clone the repository using git as shown below
-git clone https://github.com/premvinodh/microservices.git
-That downloads the complete history of the repository, so you can switch to any version. Next, change into the newly cloned repository:
-
-2. cd <complete_path_on_your_system>\microservices
-
-3. Use git checkout <COMMIT> to change to the right commit of a particular topic
-git checkout 675a66cca83cdab6bfa4d713c6445674854b9238
