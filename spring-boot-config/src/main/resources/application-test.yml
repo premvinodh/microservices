@@ -1,0 +1,21 @@
+my:
+   greeting: Hello World
+   list: 
+      values: One,Two,Three
+      
+dbValues: "{connectionString: 'http://my.connection.string', userName: 'foo', password: 'bar'}"
+
+app:
+   name: My app
+   description: Welcome to ${app.name}     
+   
+db:
+   connection: test-connection-string-here
+   host: 129.0.0.1
+   port: 2400    
+   
+management:
+   endpoints:
+      web:
+         exposure:
+            include: "*"          
