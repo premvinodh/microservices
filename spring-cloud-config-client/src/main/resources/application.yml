@@ -20,3 +20,5 @@ spring:
       - http://localhost:8080
   profiles:
       active: test   
+  application:
+    name: spring-cloud-config-client
