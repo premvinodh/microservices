@@ -26,7 +26,7 @@ Refer the section below on how to [get a specific commit(https://github.com/prem
 |	7.		| Hystrix Dashabord for MovieCatalogService microservice    														| 6ddcac40b9233896ed3c4d1c1e4a409c158cf716				|
 |	8.		| Spring Cloud Config Server which fetches the data from a local git repo called configrepo    						| 54a99d066b7034c07efe3dfd2f45c4ae89b67046				|
 |	9.		| Spring Cloud Config Client which fetches the data from the Spring Cloud Config Server	    						| 0f9fcbf867a57ada10dc0e000338624855904a27				|
-|	10.		| Added application name to spring-cloud-config-client to pair it with spring-cloud-config-client.yml of configrepo	| 0f9fcbf867a57ada10dc0e000338624855904a27				|
+|	10.		| Added application name to spring-cloud-config-client to pair it with spring-cloud-config-client.yml of configrepo	| 1929185864ede5a744640150f1679d6f5d17115d				|
 
 ### How to get certain commit from GitHub project
 ------------------------------------------------
