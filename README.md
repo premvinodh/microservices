@@ -25,6 +25,7 @@ Refer the section below on how to [get a specific commit(https://github.com/prem
 |	6.		| Granular fallback for invididual rest api calls		    									| 40578f1f90f1d4bfaf6fae0073eb7105b3ef2b79				|
 |	7.		| Hystrix Dashabord for MovieCatalogService microservice    									| 6ddcac40b9233896ed3c4d1c1e4a409c158cf716				|
 |	8.		| Spring Cloud Config Server which fetches the data from a local git repo called configrepo    	| 54a99d066b7034c07efe3dfd2f45c4ae89b67046				|
+|	9.		| Spring Cloud Config Client which fetches the data from the Spring Cloud Config Server	    	| 0f9fcbf867a57ada10dc0e000338624855904a27				|
 
 ### How to get certain commit from GitHub project
 ------------------------------------------------
