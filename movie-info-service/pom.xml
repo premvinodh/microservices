@@ -12,6 +12,8 @@
 	<groupId>com.samples.my</groupId>
 	<artifactId>movie-info-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	
 	<name>movie-info-service</name>
 	<description>Movie Info Service using Spring Boot</description>
 	
